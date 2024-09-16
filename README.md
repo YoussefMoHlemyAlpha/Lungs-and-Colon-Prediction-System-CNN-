@@ -1,1 +1,1 @@
-# Lungs-and-Colon-Prediction-System-CNN-
+# Lungs-and-Colon-Prediction-System-CNN
