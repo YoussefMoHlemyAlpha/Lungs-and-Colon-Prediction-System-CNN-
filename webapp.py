@@ -35,8 +35,7 @@ if selected == 'Lungs Prediction':
                 img_array = np.expand_dims(img_resized_scaled, axis=0)  # Add batch dimension
 
                 predictions = lungs_model.predict(img_array)
-                score = tf.nn.softmax(predictions[0])
-                predicted_class = np.argmax(score)
+                predicted_class = np.argmax(predictions)
                 class_names = ['lung_n', 'lung_aca', 'lung_scc']  # Make sure these match your model's output
 
                 st.write(f"Prediction: {class_names[predicted_class]}")
@@ -62,8 +61,7 @@ if selected == 'Colon Prediction':
                 img_array = np.expand_dims(img_resized_scaled, axis=0)  # Add batch dimension
 
                 predictions = colon_model.predict(img_array)
-                score = tf.nn.softmax(predictions[0])
-                predicted_class = np.argmax(score)
+                predicted_class = np.argmax(predictions)
                 class_names = ['colon_n', 'colon_aca']  # Make sure these match your model's output
 
                 st.write(f"Prediction: {class_names[predicted_class]}")
